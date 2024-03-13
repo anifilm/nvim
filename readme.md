@@ -1,4 +1,5 @@
 $ sudo apt list neovim (check version >= 8.0)
+
 $ sudo apt install neovim
 
 $ sudo apt install lua5.3
