@@ -16,7 +16,9 @@ $ sudo apt install lua5.3
 $ sudo apt install ripgrep
 
 
-참고영상(코딩문TV) 및 GitHub 링크
+
+
+### 참고영상(코딩문TV) 및 GitHub 링크
 
 https://youtu.be/u6S71cpMfw8?si=4g7WBeAQuKtirh5n
 
