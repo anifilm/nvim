@@ -1,19 +1,26 @@
 local mapKey = require("utils.keyMapper").mapKey
 
 -- Neotree toggle
-mapKey('<leader>e', ':Neotree toggle<CR>')
+mapKey("<leader>e", ":Neotree toggle<CR>")
 
 -- pane navigation 
-mapKey('<C-h>', '<C-w>h') -- Left
-mapKey('<C-j>', '<C-w>j') -- Down
-mapKey('<C-k>', '<C-w>k') -- Up
-mapKey('<C-l>', '<C-w>l') -- Right
+mapKey("<C-h>", "<C-w>h") -- Left
+mapKey("<C-j>", "<C-w>j") -- Down
+mapKey("<C-k>", "<C-w>k") -- Up
+mapKey("<C-l>", "<C-w>l") -- Right
 
 -- clear search highlights 
-mapKey('<leader>h', ':nohlsearch<CR>')
+mapKey("<leader>h", ":nohlsearch<CR>")
+
+-- indent
+mapKey("<", "<gv", "v")
+mapKey(">", ">gv", "v")
+
+-- comment
+--mapKey("<C-_>", "gcc")
 
 -- set paste
-mapKey('<leader>p', ':set paste noai<CR>')
+mapKey("<leader>p", ":set paste noai<CR>")
 
 -- coc.nvim
 local keyset = vim.keymap.set
@@ -34,9 +41,9 @@ local opts = {silent = true, noremap = true, expr = true, replace_keycodes = fal
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
-keyset("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+keyset("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
-keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+keyset("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
-keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+keyset("i", "<C-space>", "coc#refresh()", {silent = true, expr = true})
