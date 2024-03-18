@@ -20,7 +20,8 @@ $ sudo apt install ripgrep
 
 ### 참고영상(코딩문TV) 및 GitHub 링크
 
-https://youtu.be/u6S71cpMfw8?si=4g7WBeAQuKtirh5n
-https://youtu.be/M8YrfquecWc?si=O6NS5AlUd4FI8DdR
+part.1- https://youtu.be/u6S71cpMfw8?si=4g7WBeAQuKtirh5n
+
+part.2- https://youtu.be/M8YrfquecWc?si=O6NS5AlUd4FI8DdR
 
 https://github.com/moong00n/neovim-starter
