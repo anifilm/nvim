@@ -10,6 +10,15 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 
+-- comment setting
+vim.api.nvim_create_autocmd("BufEnter", {
+    desc = "Disable automatic comment insertion",
+    group = vim.api.nvim_create_augroup("AutoComment", {}),
+    callback = function()
+        vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+    end,
+})
+
 vim.opt.rtp:prepend(lazypath)
 
 require("config.globals")
